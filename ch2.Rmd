@@ -113,6 +113,13 @@ barchart(ptabsex,horizontal=FALSE,
          ylab="Percent")
 ```
 
+```{r}
+ptabseat <- with(m111survey,perctable(seat))
+barchart(ptabseat,horizontal=FALSE,
+         main="Distribution of Seat\n(Percentages)",
+         ylab="Percent")
+```
+
 >**Practice:**  Investigate graphically the Research Question:  "What percentage of students prefer to sit in the front of a classroom?"  Make a barchart of percentages.
 ```{r}
 ptabseat <- with(m111survey,perctable(seat)) 
@@ -131,9 +138,17 @@ These are also called *cross-tables* or *contingency tables*.  Here's how you ma
 tabsexseat <- xtabs(~sex+seat,data=m111survey)
 tabsexseat
 ```
+
 In the formula above, the variable you put first goes along the rows of the table.  We like to put the explanatory variable first.
 ```{r}
-
+```{r}
+barchart(ptabseat,horizontal=FALSE,
+         main="Distribution of Seat\n(Percentages)",
+         ylab="Percent")
+```
+barchart(ptabseat,horizontal=FALSE,
+         main="Distribution of Seat\n(Percentages)",
+         ylab="Percent")
 ```
 
 What about percents?  When the explanatory variable is along the rows, it is a good idea to make *row percentages*:
